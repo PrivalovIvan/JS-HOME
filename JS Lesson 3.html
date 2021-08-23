@@ -1,0 +1,79 @@
+<script>
+    // Задание 1.
+
+    {
+        let n = 100;
+        Start:
+        for (let a = 2; a <= n; a++) {
+            for (let j = 2; j < a; j++) {
+                if (a % j == 0) continue Start;
+            }
+            console.log(a);
+        }
+    }
+
+
+    {
+        let n = 10;
+        Start:
+        for (let a = 2; a <= n; a++) {
+            for (let j = 2; j < a; j++) {
+                if (a % j == 0) continue Start;
+            }
+            console.log(a);
+        }
+        i = 10
+        while (i < 100) {
+            i++
+            if (i % 2 === 0 ||
+                i % 3 === 0 ||
+                i % 4 === 0 ||
+                i % 5 === 0 ||
+                i % 6 === 0 ||
+                i % 7 === 0 ||
+                i % 8 === 0 ||
+                i % 9 === 0) continue
+            console.log(i)
+        }
+    }
+
+
+
+    // Задание 2.
+
+    {
+        var initialValue = 0;
+        var sum = [[{ product: 'shirt', quantity: 5, price: 300 }],
+        [{ product: 'jeans', quantity: 2, price: 1000 }],
+        [{ product: 'jacket', quantity: 1, price: 3000 }]]
+            .reduce(function (a, b) {
+                return a.concat(b);
+            });
+        console.log(sum)
+
+        const aboveTenSum = sum
+            .reduce(function (accumulator, currentValue) {
+                return accumulator + currentValue.quantity * currentValue.price;
+            }, initialValue)
+
+        console.log(aboveTenSum)
+
+    }
+    // Задание 3.
+    for (var i = 0; i < 10; console.log(i++)) {
+
+    }
+    // Задание 4.
+    let n = 21
+    for (let i = 1; i < n; i++) {
+        let p = '';
+        for (let b = 1; b <= i; b++) {
+            p += 'x';
+        }
+        console.log(p)
+    }
+
+
+
+
+</script>
