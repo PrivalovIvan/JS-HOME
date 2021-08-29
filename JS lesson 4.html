@@ -8,17 +8,13 @@
                 units: 0,
                 tens: 0,
                 hundreds: 0
-            }
-            if (number <= 9) {
-                figure.Едениц = number
-                console.log(figures)
-            }
-            else if (number < 1000) {
+			}
+             if (number < 1000) {
                 figure.units = Math.floor(number % 10)
                 figure.tens = Math.floor(number / 10 % 10)
                 figure.hundreds = Math.floor(number / 100 % 10)
                 console.log(figure)
-            } else if (number > 999 || number !== /[0-9]/) {
+            } else if (number > 999 || number < 0 || number !== /[0-9]/) {
                 console.log('Вы ввели некорректные данные!')
             }
         }
